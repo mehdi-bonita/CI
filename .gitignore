@@ -1,0 +1,11 @@
+/bin
+.classpath
+/src-providedGroovy
+/template
+/bonita_home
+/process_configurations
+/META-INF
+/.settings
+/target/
+/web_widgets/pb*/
+/lib/bdm-client-pojo.jar
