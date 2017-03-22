@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.4.2">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Voiture">
+            <fields>
+                <field type="STRING" length="255" name="modele" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="prix" nullable="true" collection="false"/>
+                <field type="DATE" length="255" name="dateAchat" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

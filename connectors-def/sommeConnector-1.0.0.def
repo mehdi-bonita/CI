@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>sommeConnector</id>
+  <version>1.0.0</version>
+  <category id="2"/>
+  <input mandatory="true" name="entier1" type="java.lang.Integer"/>
+  <input mandatory="true" name="entier2" type="java.lang.Integer"/>
+  <output name="somme" type="java.lang.Integer"/>
+  <page id="RécupérationInputs">
+    <widget xsi:type="definition:Text" id="int1" inputName="entier1"/>
+    <widget xsi:type="definition:Text" id="int2" inputName="entier2"/>
+  </page>
+</definition:ConnectorDefinition>
