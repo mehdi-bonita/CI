@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.company.achat</groupId>
+    <artifactId>demande-achat-test-deploy</artifactId>
+    <version>0.0.1</version>
+    <description>Déploiement des artifacts Bonita pour les tests du projet de gestion de demandes d'achats.</description>
+
+    <properties>
+        <engine.version>7.4.2</engine.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--
+          Server URL used for Bonita BPM artifacts (processes, BDM...) deployement.
+          Will be overriden by Jenkins when running Maven deploy task 
+        -->
+        <server.url>http://localhost:8080</server.url>
+    </properties>
+    
+    <build>
+    <plugins>
+      <plugin>
+          <groupId>com.bonitasoft.maven</groupId>
+            <artifactId>bonita-deployer-plugin</artifactId>
+            <version>0.0.4</version>
+            <configuration>
+              <configurationFileOrFolder>${basedir}</configurationFileOrFolder>
+              <serverURL>${server.url}</serverURL>
+              <applicationContext>bonita</applicationContext>
+              <tenantName>default</tenantName>
+              <platformLogin>platformAdmin</platformLogin>
+              <platformPassword>platform</platformPassword>
+              <userLogin>install</userLogin>
+              <userPassword>install</userPassword>
+             </configuration>
+             <executions>
+              <execution>
+                <goals>
+                  <goal>bonita-deploy</goal>
+                   </goals>
+               </execution>
+             </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

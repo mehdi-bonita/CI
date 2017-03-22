@@ -1,0 +1,36 @@
+{
+	"name":"Demande achat",
+	"version":"1.0.0",
+	"description":"Application de gestion de demandes d'achats",
+	"targetVersion":"7.4.2",
+	"organization":{
+		"file":"../target/ACME.xml",
+		"policy":"MERGE_DUPLICATES"
+	},
+	"profiles":[
+		{
+			"file":"Profile_Data.xml",
+			"policy":"DELETE_EXISTING"
+		}
+	],
+	"businessDataModel":{
+		"file":"../target/bdm.zip",
+		"policy":"DROP"
+	},
+	"processes":[
+		{
+			"file":"../target/Validation demande achat--7.4.2-0.0.1.bar",
+			"policy":"CLEAN_INSTALL",
+      "configuration":
+        {
+          "parameters":"Validation demande achat--7.4.2-0.0.1-qualification.properties"
+        }
+		},
+		{
+			"file":"../target/Suppression demande achat--7.4.2-0.0.1.bar",
+			"policy":"CLEAN_INSTALL"
+		}
+		
+	],
+	"modelVersion":"0.1"
+}
