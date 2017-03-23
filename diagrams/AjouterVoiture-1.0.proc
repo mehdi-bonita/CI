@@ -67,7 +67,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_bJRd8v5qEeakNeNv28899Q" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_bJRd8_5qEeakNeNv28899Q" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_bJSFAP5qEeakNeNv28899Q">
-            <targetForm xmi:type="expression:Expression" xmi:id="_cdA9wP5qEeakNeNv28899Q" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_YZuosA_oEeeAwoCxiKl3BA" name="step2Form" content="3f8e0988-14df-4347-9bee-96ce047ab8af" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_bJRd-f5qEeakNeNv28899Q"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_bJSFAv5qEeakNeNv28899Q" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
