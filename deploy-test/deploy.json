@@ -20,7 +20,11 @@
 	"processes":[
 		{
 			"file":"../target/AjouterVoiture--1.0.bar",
-			"policy":"CLEAN_INSTALL"
+			"policy":"CLEAN_INSTALL",
+			"configuration":
+				{
+				  "actorMapping":"AjouterVoiture_1.0_Mapping.xml"
+				}
 		}
 	],
 	"modelVersion":"0.1"
