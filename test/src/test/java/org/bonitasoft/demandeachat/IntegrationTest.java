@@ -52,7 +52,7 @@ public class IntegrationTest {
 	@AfterClass
 	public static void tearDownClass() throws Exception {
 		// Run a process to remove all business data
-		ProcessExecutionDriver.createProcessInstance(PROCESSUS_SUPPRESSION_DONNEES_METIER, PROCESSES_VERSION);
+		//ProcessExecutionDriver.createProcessInstance(PROCESSUS_SUPPRESSION_DONNEES_METIER, PROCESSES_VERSION);
 
 		BonitaBPMAssert.tearDown();
 		Server.logout(session);
