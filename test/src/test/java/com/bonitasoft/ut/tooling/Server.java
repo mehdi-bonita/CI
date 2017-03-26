@@ -24,7 +24,7 @@ public class Server {
 	public static APISession httpConnect() throws BonitaHomeNotSetException, ServerAPIException,
 			UnknownAPITypeException, LoginException {
 		// Create a Map to configure Bonita Client
-		Map<String, String> apiTypeManagerParams = new HashMap<>();
+		Map<String, String> apiTypeManagerParams = new HashMap<String, String>();
 
 		// URL for server (without web app name)
 		apiTypeManagerParams.put("server.url", System.getProperty("server.url", "http://localhost:8080/"));
