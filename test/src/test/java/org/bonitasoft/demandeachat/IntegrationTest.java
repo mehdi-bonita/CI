@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.bonitasoft.engine.api.ProcessAPI;
 import org.bonitasoft.engine.api.TenantAPIAccessor;
+import org.bonitasoft.engine.bpm.flownode.ActivityInstance;
 import org.bonitasoft.engine.session.APISession;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -101,15 +102,18 @@ public class IntegrationTest {
 
 		Map<String, Serializable> nouvelleDemandeAchatInputs = new HashMap<String, Serializable>();
 
-		nouvelleDemandeAchatInputs.put("demandeAchatInput", voitureInput);
+		nouvelleDemandeAchatInputs.put("voitureInput", voitureInput);
 
 		return nouvelleDemandeAchatInputs;
 	}
 
 	private Map<String, Serializable> demandeAchatApprouveeInputs() {
-		Map<String, Serializable> demandeAchatApprouveeInputs = new HashMap<String, Serializable>();
 
-		demandeAchatApprouveeInputs.put("statut", "Validation");
+		HashMap<String, Serializable> validation = new HashMap<String, Serializable>();
+		validation.put("statut", "Validation");
+
+		Map<String, Serializable> demandeAchatApprouveeInputs = new HashMap<String, Serializable>();
+		demandeAchatApprouveeInputs.put("voitureInput", validation);
 
 		return demandeAchatApprouveeInputs;
 	}
@@ -140,10 +144,14 @@ public class IntegrationTest {
 	}
 
 	private Map<String, Serializable> demandeAchatRejeteeInputs() {
-		Map<String, Serializable> demandeAchatApprouveeInputs = new HashMap<String, Serializable>();
+		
+		HashMap<String, Serializable> validation = new HashMap<String, Serializable>();
+		validation.put("statut", "Refus");
 
-		demandeAchatApprouveeInputs.put("statut", "Refus");
+		Map<String, Serializable> demandeAchatRejeteeInputs = new HashMap<String, Serializable>();
 
-		return demandeAchatApprouveeInputs;
+		demandeAchatRejeteeInputs.put("voitureInput", validation);
+
+		return demandeAchatRejeteeInputs;
 	}
 }

@@ -78,7 +78,7 @@ public class ProcessExecutionDriver {
 	public static void executePendingHumanTask(ActivityInstance activityInstance, Long userId,
 			Map<String, Serializable> taskInputs) throws Exception {
 		long humanTaskInstanceId = activityInstance.getId();
-
+		processAPI.assignUserTask(humanTaskInstanceId, userId);
 		processAPI.executeUserTask(userId, humanTaskInstanceId, taskInputs);
 	}
 

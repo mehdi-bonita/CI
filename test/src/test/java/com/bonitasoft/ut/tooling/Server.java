@@ -27,7 +27,7 @@ public class Server {
 		Map<String, String> apiTypeManagerParams = new HashMap<String, String>();
 
 		// URL for server (without web app name)
-		apiTypeManagerParams.put("server.url", System.getProperty("server.url", "http://localhost:8080/"));
+		apiTypeManagerParams.put("server.url", System.getProperty("server.url", "http://localhost:8090/"));
 
 		// Bonita web application name
 		apiTypeManagerParams.put("application.name", BONITA_WEBAPP_NAME);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_LhMA0PzgEeaWXLQRbogvCQ" name="AjouterVoiture" author="Mehdi" bonitaVersion="7.4.2" bonitaModelVersion="7.4.0-004" configId="ACED000574001E416A6F75746572566F6974757265372E342E302D303034372E342E327370">
     <elements xmi:type="process:Pool" xmi:id="_LhMA0fzgEeaWXLQRbogvCQ" name="AjouterVoiture" welcomePageInternal="false" basedOnLookAndFeel="Default Application">
       <elements xmi:type="process:Lane" xmi:id="_LhMA0vzgEeaWXLQRbogvCQ" name="Employé (lane)" actor="_LhMBCfzgEeaWXLQRbogvCQ">
@@ -14,27 +14,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_LhMA2vzgEeaWXLQRbogvCQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_LhMA2_zgEeaWXLQRbogvCQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_LhMA3PzgEeaWXLQRbogvCQ" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_Zc-UMP5qEeakNeNv28899Q" name="somme" definitionId="sommeConnector" event="ON_ENTER" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Zc-UMf5qEeakNeNv28899Q" definitionId="sommeConnector" version="1.0.0" modelVersion="7.4.0-004">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Zc-UMv5qEeakNeNv28899Q" key="entier1">
-                <expression xmi:type="expression:Expression" xmi:id="_Zc-UM_5qEeakNeNv28899Q" name="5" content="5" returnType="java.lang.Integer" returnTypeFixed="true"/>
-              </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Zc-UNP5qEeakNeNv28899Q" key="entier2">
-                <expression xmi:type="expression:Expression" xmi:id="_Zc-UNf5qEeakNeNv28899Q" name="6" content="6" returnType="java.lang.Integer" returnTypeFixed="true"/>
-              </parameters>
-            </configuration>
-            <outputs xmi:type="expression:Operation" xmi:id="_Zc-UNv5qEeakNeNv28899Q">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_Zc-UN_5qEeakNeNv28899Q" name="voiture" content="voiture" type="TYPE_VARIABLE" returnType="com.company.model.Voiture">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Zc-UOP5qEeakNeNv28899Q" name="voiture" dataType="_LhMBJvzgEeaWXLQRbogvCQ" className="com.company.model.Voiture"/>
-              </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_Zc-UOf5qEeakNeNv28899Q" name="somme" content="somme" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Integer">
-                <referencedElements xmi:type="definition:Output" xmi:id="_Zc-UOv5qEeakNeNv28899Q" name="somme" type="java.lang.Integer"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_Zc-UO_5qEeakNeNv28899Q" type="JAVA_METHOD" expression="setPrix">
-                <inputTypes>java.lang.Integer</inputTypes>
-              </operator>
-            </outputs>
-          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="__UbCABC0EeeJIu-xQCT-_Q">
             <leftOperand xmi:type="expression:Expression" xmi:id="__UbCARC0EeeJIu-xQCT-_Q" name="voiture" content="voiture" type="TYPE_VARIABLE" returnType="com.company.model.Voiture">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="__UbCAhC0EeeJIu-xQCT-_Q" name="voiture" dataType="_LhMBJvzgEeaWXLQRbogvCQ" className="com.company.model.Voiture"/>
